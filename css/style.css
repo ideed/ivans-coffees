@@ -1,0 +1,100 @@
+.bg-dark {
+    background-color:#502f23!important;
+}
+body{
+	background-color:#46281d;
+	background-image:url("coffeeback.jpg");
+	background-size:fill;                      
+    background-position:center center;
+	background-repeat:repeat;
+	padding:0px;
+	margin:0px;
+}
+.dropdown-menu{
+	background-color:#795548;
+}
+.dropdown-item{
+	color:#fff;
+}
+.imgtop{
+	width:100%;
+	height:100%;
+}
+.mainbody{
+	margin-top:20px;
+	background-color:#60392a;
+	color:#fff;
+	height:100%;
+}
+.imgcent{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	height:100%;
+	padding-top:10px;
+	padding-left:5x;
+}
+.border-dark{
+    border-color:#111417!important;
+}
+.border-bottom{
+	border-bottom:4px solid #0e1113!important;
+}
+.foot{
+	margin-left:auto;
+	margin-right:auto;
+}
+.center{
+	text-align:center;
+}
+a,a:hover{ 
+	font-size:100%;
+	color:#fff;
+	font-weight:bold;
+}
+.footerac{
+	color:#fff;
+}
+.border-dark{
+    border-color:#111417!important;
+}
+.border{
+    border:2px solid #0e1113!important;
+}
+.headback{
+	margin:auto;
+}
+.border-bottom{
+	border-bottom:2px solid #0e1113!important;
+}
+.calbody{
+	text-align:center;
+	font-size:100%;
+	
+}
+.calhead{
+	font-weight:bold;
+	text-decoration:underline;
+}
+input{
+    resize:horizontal;
+    width:100%;
+}
+.cal{
+	padding-top:15px;
+	padding-bottom:15px;
+	margin:auto;
+}
+.mySlides {
+	display:none;
+}
+.galleryp{
+	text-align:center;
+	font-size:100%;
+}
+.drinkimg{
+	padding-left:auto;
+	padding-right:auto;
+}.drinkprice{
+	font-weight:bold;
+}

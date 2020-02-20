@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Ivan's Coffees
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../../css/style.css">
+		<meta name="description" content="Ivan's Coffees! Home to all of your best local hot beverages!">
+		<meta name="keywords" content="Coffee,Coffee Shop,Cappuccino,Espresso,Hot Chocolate,Latte">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="containter">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-dark">
+		  <a class="navbar-brand" href="../../index.html"><img class="imgtop" src="https://images.cooltext.com/5211373.png" width="412" height="61" alt="Ivan's Coffees" /></a><!--Image by https://cooltext.com --></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link" href="../../index.html">Home<span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item active dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Coffees
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				  <a class="dropdown-item" href="../espresso/index.html">Espresso</a>
+				  <a class="dropdown-item" href="../latte/index.html">Latte</a>
+				  <a class="dropdown-item" href="../cappacino/index.html">Cappuccino</a>
+				  <a class="dropdown-item" href="../hot Chocolate/index.html">Hot chocolate</a>
+				  <a class="dropdown-item" href="index.html">Coffee Calculator</a>
+				</div>
+				<li class="nav-item">
+				<a class="nav-link" href="../../gallery/index.html">Gallery</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="../../contacts/index.html">Contacts</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+		<div class="container mainbody border border-dark">
+			<div class="row calbody">
+				<div class="col-12">
+					<h1>Coffee calculator</h1>
+				</div>
+				<div class="col-6 calbody">
+					<h3 class="calhead">Espresso</h3>
+					<p>Small &#8364 2.00</p> 
+					<input type="number" min="0" name="ESm"></input>
+					<p>Medium &#8364 2.20</p>
+					<input type="number" min="0" name="EMd"></input>
+					<p>Large &#8364 2.50</p>
+					<input type="number" min="0" name="ELg"></input>
+				</div>
+				<div class="col-6 calbody">
+					<h3 class="calhead">Cappuccino</h3>
+					<p>Small &#8364 3.20</p> 
+					<input type="number" min="0" name="CSm"></input>
+					<p>Medium &#8364 3.50</p>
+					<input type="number" min="0" name="CMd"></input>
+					<p>Large &#8364 4.10</p>
+					<input type="number" min="0" name="CLg"></input>
+				</div>
+				<div class="col-6 calbody">
+					<h3 class="calhead">Latte</h3>
+					<p>Small &#8364 3.30</p> 
+					<input type="number" min="0" name="LSm"></input>
+					<p>Medium &#8364 3.60</p>
+					<input type="number" min="0" name="LMd"></input>
+					<p>Large &#8364 4.10</p>
+					<input type="number" min="0" name="LLg"></input>
+				</div>
+				<div class="col-6 calbody">
+					<h3 class="calhead">Hot Chocolate</h3>
+					<p>Small &#8364 3.00</p> 
+					<input type="number" min="0" name="HSm"></input>
+					<p>Medium &#8364 3.30</p>
+					<input type="number" min="0" name="HMd"></input>
+					<p>Large &#8364 3.80</p>
+					<input type="number" min="0" name="HLg"></input>
+				</div>
+				<div class="col-12 calbody cal">
+					<button onclick="cal()">Calculate!</button>
+				</div>
+			<div class="row foot calbody">
+				<p>&copy 2018 Copyright: <a class="footerac" href="../../index.html">Ivan's Coffees.com</a></p>
+			</div>
+			</div>
+		</div>
+		</div>
+		<script>
+		function cal(){
+		var ESPRESSSM = 2.00;
+		var ESPRESSMD = 2.20;
+		var ESPRESSLG = 2.50;
+		var CAPSM = 3.20;
+		var CAPMD = 3.50;
+		var CAPLG = 4.10;
+		var LATSM = 3.30;
+		var LATMD = 3.60;
+		var LATLG = 4.20;
+		var HOTSM = 3.00;
+		var HOTMD = 3.30;
+		var HOTLG = 3.80;
+		var espressSm = document.getElementsByName("ESm")[0].value;
+		var espressMd = document.getElementsByName("EMd")[0].value;
+		var espressLg = document.getElementsByName("ELg")[0].value;
+		var capSm = document.getElementsByName("CSm")[0].value;
+		var capMd = document.getElementsByName("CMd")[0].value;
+		var capLg = document.getElementsByName("CLg")[0].value;
+		var latSm = document.getElementsByName("LSm")[0].value;
+		var latMd = document.getElementsByName("LMd")[0].value;
+		var latLg = document.getElementsByName("LLg")[0].value;
+		var hotSm = document.getElementsByName("HSm")[0].value;
+		var hotMd = document.getElementsByName("HMd")[0].value;
+		var hotLg = document.getElementsByName("HLg")[0].value;
+		var totalEspress = ESPRESSSM*espressSm + ESPRESSMD*espressMd + ESPRESSLG*espressLg;
+		var totalCap = CAPSM*capSm + CAPMD*capMd + CAPLG*capLg;
+		var totalLat = LATSM*latSm + LATMD*latMd + LATLG*latLg;
+		var totalHot = HOTSM*hotSm + HOTMD*hotMd + HOTLG*hotLg;
+		var total = totalEspress + totalCap + totalLat + totalHot;
+		if (total<0){
+			alert("Error, please allocate positive numbers only");
+		}
+		else{
+			alert("It will cost \u20AC"+total.toFixed(2));
+		}
+		}
+		</script>
+	</body>
+</html>

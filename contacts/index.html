@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Ivan's Coffees
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../css/style.css">
+		<meta name="description" content="Ivan's Coffees! Home to all of your best local hot beverages!">
+		<meta name="keywords" content="Coffee,Coffee Shop,Cappuccino,Espresso,Hot Chocolate,Latte">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="containter">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-dark">
+		  <a class="navbar-brand" href="../index.html"><img class="imgtop" src="https://images.cooltext.com/5211373.png" width="412" height="61" alt="Ivan's Coffees" /></a><!--Image by https://cooltext.com --></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Coffees
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				  <a class="dropdown-item" href="../coffees/espresso/index.html">Espresso</a>
+				  <a class="dropdown-item" href="../coffees/latte/index.html">Latte</a>
+				  <a class="dropdown-item" href="../coffees/cappacino/index.html">Cappuccino</a>
+				  <a class="dropdown-item" href="../coffees/hot chocolate/index.html">Hot chocolate</a>
+				  <a class="dropdown-item" href="../coffees/coffee calculator/index.html">Coffee Calculator</a>
+				</div>
+				<li class="nav-item">
+				<a class="nav-link" href="../Gallery/index.html">Gallery</a>
+			  </li>
+			  <li class="nav-item active">
+				<a class="nav-link" href="index.html">Contacts</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+		<div class="container mainbody border border-dark">
+			<div class="row">			
+				<div class="col-6 cal">
+				<p>Phone: 020 917 8937</p>
+				<p>Email: ivanscoffees@hotmail.com</p>
+				<p>Adress: IFSC 2 Lower Mayor Street, Dublin</p>
+				<p class="calhead">Send us a message!</p>
+				<form>
+				  Name<br>
+				  <input name="names"><br>
+				  Email<br>
+				  <input name="email">
+				  Phone (Optional):<br>
+				  <input name="phone">
+				  Message:<br>
+				  <input name="messages">
+				  <p></p>
+				  <button onclick="contact()">Send</button>
+				</form> 
+				</div>	
+				<div class="col-6 cal">
+				<img class="imgtop" src="shop.jpg" alt="Picture of inside Ivan's coffee shop"></img>
+				</div>				
+			<div class="row foot">
+				<p>&copy 2018 Copyright: <a class="footerac" href="../index.html">Ivan's Coffees.com</a></p>
+			</div>
+			</div>
+		</div>
+		</div>
+		<script>
+			function contact(){
+				var name = document.getElementsByName("names")[0].value;
+				var email = document.getElementsByName("email")[0].value;
+				var phone = document.getElementsByName("phone")[0].value;
+				var message = document.getElementsByName("messages")[0].value;
+				if (name == ""){
+					alert("Please enter a name!");
+					return;
+				}
+				else if (email == ""){
+					alert("Please enter an email!");
+					return;
+				}
+				else if (message == ""){
+					alert("Please enter a message!");
+					return;
+				}
+				else if (confirm("Are you sure you want to send the follow message: " + message)) {
+					alert("Message sent!");
+				} 
+				else {
+					alert("Message cancelled!");
+				}
+			}
+		</script>
+	</body>
+</html>
